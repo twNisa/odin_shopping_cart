@@ -1,0 +1,44 @@
+#links >div{
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0 2rem;
+  padding-top: 2rem;
+  justify-content: space-between;
+}
+
+#links a{
+  display: flex;
+  background-color: var(--gray);
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  gap: .6rem;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  width: 30%;
+  height: 10rem;
+  border-radius: .5rem;
+}
+#links a > img{
+  max-width: 10rem;
+  position: absolute;
+  top: -30%;
+}
+#links a div{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#links a p{
+  color: var(--text);
+  font-weight:bold;
+  font-size: .8rem;
+}
+#links a:hover p{
+  color:var(--accent)
+}

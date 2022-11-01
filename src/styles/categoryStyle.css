@@ -1,0 +1,82 @@
+main{
+
+}
+main > .banner{
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  padding: 4rem 0;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+main  .content{
+  padding: 2rem;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  gap: 4rem;
+}
+
+main .content .item{
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+main .content .item div{
+  display: flex;
+  flex-direction: column;
+
+}
+main .content .item:nth-child(even){
+  flex-direction: row-reverse;
+}
+
+main .content .item img{
+  width: 45%;
+  border-radius: 1rem;
+}
+
+main .content .item div h4{
+  color: var(--accent);
+  letter-spacing: .4rem;
+  font-weight: 300;
+  font-size: .8rem;
+  text-transform: uppercase;
+}
+main .content .item div h3{
+  text-transform: uppercase;
+
+  margin: 1.5rem 50% 1.5rem 0;
+  font-size: 1.6rem;
+}
+
+main .content .item div p{
+  color: var(--text);
+  font-size: .9rem;
+  line-height: 1.66;
+  margin-bottom: 1.5rem;
+}
+
+
+main .content .item div .btn{
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 1rem;
+  border: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  align-self: flex-start;
+}
+
+main .content .item div .btn:hover{
+  background-color: var(--accentLight);
+}
