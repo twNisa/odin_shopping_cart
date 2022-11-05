@@ -8,31 +8,39 @@ import {NavLink} from "react-router-dom"
 export default function Category({type}){
   console.log(data)
   // sort((a,b)=> (a.new && !b.new) ? 1: (!a.new && b.new)? -1 : 0)
-  const pageContentArr = Array.from(data.products)
+  function sortArr(arr){
+    return arr.sort((a, b)=>(
+      (a.new > b.new) ? -1 : (a.new < b.new)? 1 : 0)
+    )
+  }
+  const filteredPageContentArr = Array.from(data.products)
     .filter(item => (
       item.category===type
     ))
+
+  const pageContentArr = sortArr(filteredPageContentArr)
     .map(item => {
       return (
-        <div className={`item ${item.slug}`} key={item.id}>
-          <img src={`${item.image.desktop}`} alt={item.name}/>
+        <div className={`item ${item.slug}`} key={item.id} new={item.new.toString()}>
+          <img src={`/odin_shopping_cart${item.image.desktop}`} alt={item.name}/>
           <div>
             {item.new && <h4>new product </h4>}
             <h3>{item.name}</h3>
             <p>{item.description}</p>
           
-            <NavLink to={`/${item.category}/${item.slug}`} className="btn" >See product</NavLink>
+            <NavLink to={`/odin_shopping_cart/${item.category}/${item.slug}`} className="btn" >See product</NavLink>
           </div>
-          
         </div>
       )
     })
+    console.log(pageContentArr)
+    // pageContentArr = pageContentArr.sort((a, b)=>(a)
 
   return (
     <>
-      <main>
+      <main className="category">
         <div className="banner">
-          <h1>Headphones</h1>
+          <h1>{type}</h1>
         </div>
         <div className="content">
           {pageContentArr}

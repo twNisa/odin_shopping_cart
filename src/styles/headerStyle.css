@@ -1,7 +1,7 @@
 header{
   background-color: var(--black);
   color: var(--white);
-
+  position: relative;
 }
 
 header>div{
@@ -25,6 +25,7 @@ header nav{
   margin: auto;
   display: flex;
   gap: 1rem;
+  
 }
 header nav a{
   text-decoration: none;
@@ -39,4 +40,141 @@ header nav a.active{
 }
 header nav a:hover{
   color: var(--accent)
+}
+header .cart{
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+header .cart img{
+  fill: white;
+}
+header .cart > span{
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+
+header .cart-modal{
+  position: absolute;
+  max-width: 20rem;
+  min-width: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  right: 5rem;
+  border-radius: 1rem;
+  color: var(--text);
+  border: black 1px solid;
+}
+header .cart-modal >div:first-of-type > button{
+  background: none;
+  border: none;
+  color: var(--text);
+  text-transform: capitalize;
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+header .cart-modal >div:first-of-type > button:hover{
+  color: var(--accent);
+  transition: color .2s ease;
+}
+header .cart-modal h3{
+  color: black;
+}
+header .cart-modal h3.empty{
+  color: var(--text);
+  text-transform: capitalize;
+}
+header .cart-modal > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+}
+header .cart-modal h5{
+  font-weight: bold;
+  color: black;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+
+header .cart-modal > div .product-cart-change{
+  margin-left: auto;
+  display: flex;
+  background-color: var(--gray);
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: bold;
+}
+header .cart-modal > div .product-cart-change >div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2ch;
+}
+header .cart-modal > div .product-cart-change button{
+  width: 2.2em;
+  height: 2.2rem;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+  transition: background-color .2s ease;
+
+}
+header .cart-modal > div .product-cart-change button p{
+  transform: translateY(5%);
+}
+header .cart-modal > div .product-cart-change button:hover{
+  background-color: var(--lightGray);
+  color: var(--accent);
+}
+header .cart-modal img{
+  max-width: 4rem;
+  border-radius: 1rem;
+}
+header .cart-modal .cart-price p:first-of-type{
+  text-transform: uppercase;
+}
+header .cart-modal .cart-price p:last-of-type{
+  font-weight: bold;
+  color: black;
+}
+header .cart-modal a{
+  text-decoration: none;
+}
+header .cart-modal .check-out{
+  width: 100%;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
+  
+}
+header .cart-modal .check-out:hover{
+  background-color: var(--accentLight);
+  transition: background-color .2s ease;
 }

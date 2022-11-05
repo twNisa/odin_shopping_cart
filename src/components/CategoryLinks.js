@@ -7,13 +7,13 @@ export default function CategoryLinks(){
   const categories = ["headphones", "speakers", "earphones"]
   const linksArr = categories.map(category =>(
     
-      <NavLink to={`/${category}`} key={category}>
+      <NavLink to={`/odin_shopping_cart/${category}`} key={category}>
     
-          <img src={`../images/shared/desktop/image-${category}.png`} alt={`${category}`} />
+          <img src={require(`../images/shared/desktop/image-${category}.png`)} alt={`${category}`} />
           <h4>{category}</h4>
           <div>
             <p>shop</p>
-            <img src="../images/shared/desktop/icon-arrow-right.svg" alt="click"/>
+            <img src={"/odin_shopping_cart/images/shared/desktop/icon-arrow-right.svg"} alt="click"/>
           </div>
         
       </NavLink>

@@ -1,18 +1,19 @@
-main{
+main.category{
 
 }
-main > .banner{
+main.category > .banner{
   background-color: var(--black);
   color: var(--white);
   display: flex;
   width: 100vw;
   justify-content: center;
+  align-items: center;
   padding: 4rem 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
-main  .content{
+main.category  .content{
   padding: 2rem;
   max-width: 1110px;
   display: flex;
@@ -21,41 +22,41 @@ main  .content{
   gap: 4rem;
 }
 
-main .content .item{
+main.category .content .item{
   display: flex;
   gap: 4rem;
   align-items: center;
 }
 
-main .content .item div{
+main.category .content .item div{
   display: flex;
   flex-direction: column;
 
 }
-main .content .item:nth-child(even){
+main.category .content .item:nth-child(even){
   flex-direction: row-reverse;
 }
 
-main .content .item img{
+main.category .content .item img{
   width: 45%;
   border-radius: 1rem;
 }
 
-main .content .item div h4{
+main.category .content .item div h4{
   color: var(--accent);
   letter-spacing: .4rem;
   font-weight: 300;
   font-size: .8rem;
   text-transform: uppercase;
 }
-main .content .item div h3{
+main.category .content .item div h3{
   text-transform: uppercase;
-
-  margin: 1.5rem 50% 1.5rem 0;
+  margin: 1.5rem 0 1.5rem 0;
   font-size: 1.6rem;
+  max-width: 14ch;
 }
 
-main .content .item div p{
+main.category .content .item div p{
   color: var(--text);
   font-size: .9rem;
   line-height: 1.66;
@@ -63,7 +64,7 @@ main .content .item div p{
 }
 
 
-main .content .item div .btn{
+main.category .content .item div .btn{
   text-decoration: none;
   background-color: var(--accent);
   color: var(--white);
@@ -77,6 +78,6 @@ main .content .item div .btn{
   align-self: flex-start;
 }
 
-main .content .item div .btn:hover{
+main.category .content .item div .btn:hover{
   background-color: var(--accentLight);
 }

@@ -1,6 +1,7 @@
 import React from "react"
 import  "../styles/aboutStyle.css"
 import bestGear from "../images/shared/desktop/image-best-gear.jpg"
+
 export default function About(){
   return(
     <section id="about">
