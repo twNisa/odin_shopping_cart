@@ -10,14 +10,13 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Main from "./components/Main"
 import Checkout from "./components/Checkout"
+
 export default function App(){
   const [shoppingCart, setShoppingCart] = React.useState([])
  
   function addItemToCart(item){
-    console.log(item)
     const i = shoppingCart.findIndex(cartItem => cartItem.item.id === item.item.id)
     if(i > -1){
-
       setShoppingCart(prev => {
         return (
           prev.map(ele => {
@@ -29,54 +28,46 @@ export default function App(){
         )
       })
     }else{
-        console.log('add new item')
         setShoppingCart([...shoppingCart, item])
     }
   }
 
-  function removeItemFromCart(item){
-    console.log("remove item")
-  }
   function removeAllFromCart(){
     setShoppingCart([])
   }
   function changeQuantity(e, id){
-
-    const i = shoppingCart.findIndex(cartItem => cartItem.item.id === id)
-   
-    e.target.textContent==="+" 
-      ? setShoppingCart(prev => {
+    if(e.target.textContent === "+"){
+       setShoppingCart(prev => {
         return (
           prev.map(ele => {
             
             if (ele.item.id === id){
-              return {item: ele.item, quantity: ele.quantity++ }
+              return {item: ele.item, quantity: ele.quantity+1 }
             }
             return ele
           })
         )
       })
-      : setShoppingCart(prev => {
-
+    } else{
+      setShoppingCart(prev => { 
         return (
           prev.map((ele, index) => {
             if (ele.item.id === id){
-              if(ele.quantity < 1){
-                prev.splice(index, 1)
-                return
-              } else {
-                return {item: ele.item, quantity: ele.quantity-- }
-              }
+              return {item: ele.item, quantity: ele.quantity-1 }              
             }
             return ele
           })
+          .filter(ele => ele.quantity > 0)
         )
       })
-
+    }
   }
 
   function getCartQuantity(){
     return shoppingCart.reduce((accu, curr) => {
+      if(!curr){
+        return accu + 0
+      }
       return accu + curr.quantity
     }, 0)
   }
@@ -87,7 +78,6 @@ export default function App(){
       <Header 
         shoppingCart={shoppingCart}
         addItemToCart={addItemToCart}
-        removeItemFromCart={removeItemFromCart}
         removeAllFromCart={removeAllFromCart}
         changeQuantity={changeQuantity}
         getCartQuantity={getCartQuantity}
@@ -97,23 +87,24 @@ export default function App(){
         <Route index element={<Main />} />
 
           <Route path="/odin_shopping_cart/headphones" element={<Category type="headphones"/>}/>
-          <Route path="/odin_shopping_cart/headphones/:productSlug" element={<Product shoppingCart={shoppingCart}
+          <Route path="/odin_shopping_cart/headphones/:productSlug" element={<Product 
             addItemToCart={addItemToCart} />} 
           
           />
 
           <Route path="/odin_shopping_cart/speakers" element={<Category type="speakers" />} />
-            <Route path="/odin_shopping_cart/speakers/:productSlug" element={<Product shoppingCart={shoppingCart}
+            <Route path="/odin_shopping_cart/speakers/:productSlug" element={<Product 
             addItemToCart={addItemToCart} />} 
             
             />
 
           <Route path="/odin_shopping_cart/earphones" element={<Category type="earphones" />} />
-          <Route path="/odin_shopping_cart/earphones/:productSlug" element={<Product    shoppingCart={shoppingCart}
+          <Route path="/odin_shopping_cart/earphones/:productSlug" element={<Product    
             addItemToCart={addItemToCart} />} 
           
           />
           <Route path="/odin_shopping_cart/checkout" element={<Checkout shoppingCart={shoppingCart} />} />
+       
           <Route path="*" element={<NotFound />} />
 
         </Route>

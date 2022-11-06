@@ -4,8 +4,9 @@ import CategoryLinks from "./CategoryLinks";
 import About from "./About";
 import data from "../products.json"
 import "../styles/productStyle.css"
-export default function Product({shoppingCart, addItemToCart}){
 
+export default function Product({addItemToCart}){
+  
  
   
   const back = useLocation().pathname.slice(0, useLocation().pathname.lastIndexOf("/"))
@@ -17,27 +18,28 @@ export default function Product({shoppingCart, addItemToCart}){
     item: productData[0],
     quantity: 1
   })
-  function changeItemQuantity(operation){
+  function decreaseItemQuantity(){
     console.log("changing product quantity")
-    if(operation === "-"){
+
       setItem(prev => (
         {
           ...prev,
           quantity: prev.quantity-1
         }
-
-      ))
-    } else{
-      setItem(prev => (
-        {
-          ...prev,
-          quantity: prev.quantity+1
-        }
-      ))
-    }
+      )
+    )
+  }
+  function increaseItemQuantity(){
+    console.log("changing product quantity")
+    setItem(prev => (
+      {
+        ...prev,
+        quantity: prev.quantity+1
+      }
+    ))
   }
   
-
+  console.log(item)
   const productBoxContents = productData[0].includedItems.map(item => (
     <li>
       <span className="product-box-quantity">{item.quantity}x</span>
@@ -70,9 +72,9 @@ export default function Product({shoppingCart, addItemToCart}){
 
             <div className="product-cart">
               <div className="product-cart-change">
-                <button className="btn btn-cart-change" onClick={()=>changeItemQuantity("-")}>-</button>
+                <button className="btn btn-cart-change" onClick={decreaseItemQuantity}>-</button>
                 <div>{item.quantity}</div>
-                <button className="btn btn-cart-change" onClick={()=>changeItemQuantity("+")}><p>+</p></button>
+                <button className="btn btn-cart-change" onClick={increaseItemQuantity}><p>+</p></button>
               </div>
               <button className="btn btn-cart-add" onClick={()=>addItemToCart(item)}>add to cart</button>
             </div>
@@ -106,7 +108,7 @@ export default function Product({shoppingCart, addItemToCart}){
     </section>
   )
 
- 
+    
   return(
     <main className="product">
       <section className="content">

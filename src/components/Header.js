@@ -9,9 +9,15 @@ export default function Header(props){
   const [cartShow, setCartShow] = React.useState(false)
   function cartClick(){
     setCartShow(!cartShow)
+    
   }
-
-  
+  function toggleCartShow(e){
+    if(e.target.className === "cart-show" || e.target.className.includes("check-out")){
+      console.log("toggle")
+      setCartShow(!cartShow)
+    }
+  }
+ 
   return (
     <header>
       <div>
@@ -22,9 +28,9 @@ export default function Header(props){
           <NavLink to="/odin_shopping_cart/speakers">Speakers</NavLink>
           <NavLink to="/odin_shopping_cart/earphones">Earphones</NavLink>
         </nav>
-        <a className="cart" href="#" onClick={cartClick}>
+        <a className="cart" onClick={cartClick}>
           {<img  src={cartImg} alt="cart"></img>}
-          {props.shoppingCart.length > 0 && <span>{props.getCartQuantity()}</span>}
+          {props.shoppingCart && <span>{props.getCartQuantity()}</span>}
         </a>
       </div>
       {cartShow && 
@@ -33,6 +39,7 @@ export default function Header(props){
               removeAll={props.removeAllFromCart}
               addItem={props.addItemToCart}
               getCartQuantity={props.getCartQuantity}
+              toggleCartShow={toggleCartShow}
         />}
     </header>
   )
