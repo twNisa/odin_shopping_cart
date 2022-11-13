@@ -12,12 +12,18 @@ export default function Header(props){
     
   }
   function toggleCartShow(e){
-    if(e.target.className === "cart-show" || e.target.className.includes("check-out")){
+    const parent = document.querySelector(".cart-modal")
+    console.log("toggle clicked", e.target)
+    if(e.target.className==="close-cart" || e.target.className.includes("check-out")){
       console.log("toggle")
       setCartShow(!cartShow)
     }
+    // if(e.target.className === "cart-show" || e.target.className.includes("check-out")){
+    //   console.log("toggle")
+    //   setCartShow(!cartShow)
+    // }
   }
- 
+  
   return (
     <header>
       <div>
@@ -30,10 +36,9 @@ export default function Header(props){
         </nav>
         <a className="cart" onClick={cartClick}>
           {<img  src={cartImg} alt="cart"></img>}
-          {props.shoppingCart && <span>{props.getCartQuantity()}</span>}
+          {props.shoppingCart.length>0 && <span>{props.getCartQuantity()}</span>}
         </a>
-      </div>
-      {cartShow && 
+        {cartShow && 
         <Cart shoppingCart={props.shoppingCart} 
               changeQuantity={props.changeQuantity}
               removeAll={props.removeAllFromCart}
@@ -41,6 +46,8 @@ export default function Header(props){
               getCartQuantity={props.getCartQuantity}
               toggleCartShow={toggleCartShow}
         />}
+      </div>
+      
     </header>
   )
 }

@@ -39,7 +39,6 @@ export default function Product({addItemToCart}){
     ))
   }
   
-  console.log(item)
   const productBoxContents = productData[0].includedItems.map(item => (
     <li>
       <span className="product-box-quantity">{item.quantity}x</span>

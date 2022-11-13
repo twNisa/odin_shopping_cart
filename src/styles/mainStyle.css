@@ -1,0 +1,98 @@
+main.homepage .banner{
+  position: relative;
+  background-color: var(--black);
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main.homepage .banner .banner-content{
+  
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+  text-align: left;
+  width: 1110px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  color: white;
+}
+main.homepage .banner .banner-content h4{
+  text-transform: uppercase;
+  letter-spacing: .8rem;
+  font-weight: 600;
+}
+main.homepage .banner .banner-content h1{
+  max-width: 20ch;
+  line-height: 1.1;
+  font-size: 3.5rem;
+}
+main.homepage .banner .banner-content h4,
+main.homepage .banner .banner-content p{
+  color: var(--textLight);
+}
+main.homepage .banner .banner-content p{
+  max-width: 40ch;
+}
+main.homepage button{
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--white);
+  padding: 1rem;
+  border: 0;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .2s ease;
+  align-self: flex-start;
+}
+
+main.homepage button:hover{
+  background-color: var(--accentLight);
+}
+
+.product-stack{
+  max-width: 1110px;
+  margin: 4rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.product-stack > div{
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  gap: 4rem;
+}
+.product-stack > div >div{
+
+
+}
+.product-stack > div >div h2{
+  color: black;
+
+}
+.product-stack>div:first-of-type{
+  padding-top: 6rem;
+  background: url("../images//home/desktop/pattern-circles.svg") no-repeat;
+  background-size: cover;
+  background-color: var(--accent);
+  background-position: -15rem -9rem;
+}
+
+.product-stack>div:first-of-type img{
+  max-width: 25rem;
+  margin-left: 10rem;
+  
+}
+
+.product-stack > div:first-of-type >div{
+  color: white;
+  
+}

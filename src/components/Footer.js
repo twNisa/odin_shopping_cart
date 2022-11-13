@@ -36,7 +36,7 @@ export default function Footer(){
         
       </div>
       <p>
-          Made by <a href="#"><span>github</span> twNisa</a> 2022. Design from Frontend Mentor
+          Made by <a href="https://github.com/twNisa">twNisa </a> 2022. Design from <a href="https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx">Frontend Mentor</a>
         </p>
     </footer>
   )

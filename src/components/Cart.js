@@ -1,14 +1,13 @@
 import React from "react";
 import cartImg from "../images/cart/empty-cart.png"
 import { NavLink } from "react-router-dom";
-export default function Cart(props){
-  console.log(props.toggleCartShow)
- 
+export default function Cart(props){ 
   function renderCartItems(){
     return (<>
       <div>
-        <h3>cart ({props.getCartQuantity()})</h3>
+        <h3>cart ({props.getCartQuantity()})</h3>      
         <button onClick={props.removeAll}>remove all</button>
+        
       </div>
       
       {props.shoppingCart.length > 0 && props.shoppingCart.map(item => (
@@ -49,11 +48,12 @@ export default function Cart(props){
   } 
 
   return (
-    <div className="cart-show" onClick={(e)=> props.toggleCartShow(e)}> 
-      <section className="cart-modal">
+   
+      <section className="cart-modal" onClick={(e)=> props.toggleCartShow(e)}>
+        <button className="close-cart">x</button>
         {props.shoppingCart.length > 0 ? renderCartItems() : renderEmptyCart()}
       </section>  
-    </div>
+    
     
   )
  

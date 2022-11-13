@@ -9,7 +9,7 @@ header>div{
   margin: 0 auto;
   display: flex;
   flex-direction: row;
-  padding: 2rem;
+  padding: 2rem 0;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -62,22 +62,26 @@ header .cart > span{
   background-color: var(--accent);
   border-radius: 50%;
 }
-
-header .cart-show{
-  background-color: rgba(0,0,0, .5);
-  max-width: none;
+header .close-cart{
   position: absolute;
-  z-index: 9;
-  width: 100vw;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-  top:0;
-  left: 0;
-  overflow-y: hidden;
-
+  top: 1rem;
+  right: 1rem;
+  height: 1rem;
+  width: 1rem;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  cursor: pointer;
 }
-
+header .close-cart:hover{
+  transform: scale(1.5);
+  color: var(--accentLight);
+  transition: transform .2s ease;
+}
 header .cart-modal{
   z-index: 10;
   position: absolute;
@@ -89,12 +93,13 @@ header .cart-modal{
   gap: 2rem;
   background-color: white;
   top: 5rem;
-  right: 5rem;
+  right: 0rem;
   border-radius: 1rem;
   color: var(--text);
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 1rem black;
 }
 header .cart-modal >div:first-of-type > button{
   background: none;

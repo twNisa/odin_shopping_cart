@@ -1,0 +1,154 @@
+main.checkout .content{
+  padding: 2rem;
+  max-width: 1110px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+
+}
+main.checkout .content a{
+  margin-bottom: 2rem;
+  text-decoration: none;
+  color: var(--text);
+  font-size: .9rem;
+  cursor: pointer;
+}
+main.checkout .content a:hover{
+  text-decoration: underline;
+}
+
+
+
+main.checkout .form-summary{
+  padding: 2rem;
+  max-width: 40%;
+  min-width: 18rem;
+  flex: 1;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  gap: 1rem;
+}
+
+main.checkout .form-summary .form-item{
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+
+}
+main.checkout .form-summary .form-item img{
+  max-width: 4rem;
+  border-radius: .5rem;
+}
+
+main.checkout .form-summary .form-item > div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  color: var(--text);
+  font-weight: bold;
+}
+main.checkout .form-summary .form-item > div >div{
+  display: flex;
+  justify-content: space-between;
+}
+main.checkout .form-summary .form-item > div >div > .name{
+  color: black;
+}
+
+main.checkout .form-summary .form-prices{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+} 
+main.checkout .form-summary .form-prices div{
+  display: flex;
+  justify-content: space-between;
+  color: var(--text);
+}
+main.checkout .form-summary .form-prices div span:last-of-type{
+  color: black;
+  font-weight: bold;
+}
+main.checkout .form-summary .form-prices > div:last-of-type{
+  margin-top: 1rem;
+}
+main.checkout .form-summary .form-prices > div:last-of-type > span:last-of-type{
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+.form-summary button{
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: .8rem 1.5rem;
+  text-transform: uppercase;
+  
+  
+}
+.form-summary button:hover{
+  background-color: var(--accentLight);
+  transition: background-color .2s ease;
+}
+
+main.checkout form{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+main.checkout .form-checkout{
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 65%;
+  flex: 1 1 65%;
+}
+
+main.checkout .form-checkout fieldset{
+ border: none; 
+ margin-bottom: 2rem;
+}
+
+main.checkout .form-checkout fieldset>div{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+main.checkout .form-checkout fieldset:nth-of-type(2)> div input:nth-of-type(1){
+  grid-column: 1 / 3;
+}
+
+main.checkout .form-checkout h3{
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+main.checkout .form-checkout legend{
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: .15rem;
+}
+main.checkout .form-checkout input{
+  border: 1px solid;
+  border-color: var(--inputBorder);
+  padding: 1rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+}
+
+main.checkout .form-checkout input:focus{
+  border-color: var(--accent);
+}
+
