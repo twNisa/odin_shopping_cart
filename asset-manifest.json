@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/odin_shopping_cart/static/css/main.76bb756b.css",
-    "main.js": "/odin_shopping_cart/static/js/main.17e42551.js",
+    "main.css": "/odin_shopping_cart/static/css/main.338d19b3.css",
+    "main.js": "/odin_shopping_cart/static/js/main.b8beed52.js",
     "static/media/image-speaker-zx9.png": "/odin_shopping_cart/static/media/image-speaker-zx9.153cd899b91a08b22b1a.png",
     "static/media/image-headphones.png": "/odin_shopping_cart/static/media/image-headphones.fbd401d9c735a217286f.png",
     "static/media/image-best-gear.jpg": "/odin_shopping_cart/static/media/image-best-gear.4d4a28e9e7c9ab158dd8.jpg",
@@ -16,12 +16,12 @@
     "index.html": "/odin_shopping_cart/index.html",
     "static/media/icon-twitter.svg": "/odin_shopping_cart/static/media/icon-twitter.5dc7711ff2433b3b89ee7742a407e3bd.svg",
     "static/media/icon-facebook.svg": "/odin_shopping_cart/static/media/icon-facebook.e9773e52bc64ea377cb95af7ccb6877e.svg",
-    "static/media/pattern-circles.svg": "/odin_shopping_cart/static/media/pattern-circles.f4df3610b83b818abbbecd009a5b11d3.svg",
-    "main.76bb756b.css.map": "/odin_shopping_cart/static/css/main.76bb756b.css.map",
-    "main.17e42551.js.map": "/odin_shopping_cart/static/js/main.17e42551.js.map"
+    "static/media/pattern-circles.svg": "/odin_shopping_cart/static/media/pattern-circles.f4df3610b83b818abbbe.svg",
+    "main.338d19b3.css.map": "/odin_shopping_cart/static/css/main.338d19b3.css.map",
+    "main.b8beed52.js.map": "/odin_shopping_cart/static/js/main.b8beed52.js.map"
   },
   "entrypoints": [
-    "static/css/main.76bb756b.css",
-    "static/js/main.17e42551.js"
+    "static/css/main.338d19b3.css",
+    "static/js/main.b8beed52.js"
   ]
 }
