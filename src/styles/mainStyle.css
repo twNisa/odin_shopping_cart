@@ -69,30 +69,81 @@ main.homepage button:hover{
   position: relative;
   display: flex;
   gap: 4rem;
+  overflow: hidden;
 }
-.product-stack > div >div{
 
-
-}
-.product-stack > div >div h2{
-  color: black;
-
-}
 .product-stack>div:first-of-type{
   padding-top: 6rem;
   background: url("../images//home/desktop/pattern-circles.svg") no-repeat;
   background-size: cover;
   background-color: var(--accent);
   background-position: -15rem -9rem;
+  
 }
 
 .product-stack>div:first-of-type img{
   max-width: 25rem;
   margin-left: 10rem;
+  margin-bottom: -20px;
   
 }
 
-.product-stack > div:first-of-type >div{
+.product-stack > div:first-of-type >div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 30%;
+  color: var(--textLight);
+}
+.product-stack > div:first-of-type >div h2{
+  font-size: 3rem;
+  font-weight: bold;
   color: white;
-  
+  max-width: 3ch;
+  letter-spacing: .5rem;
+}
+.product-stack > div:first-of-type >div button{
+  background-color: var(--black);
+}
+.product-stack > div:first-of-type >div button:hover{
+  background-color: #4c4c4c;
+}
+
+.product-stack >div:nth-of-type(2) > div{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10rem;
+  gap: 2rem;
+}
+.product-stack >div:nth-of-type(2) > div >button,
+.product-stack >div:nth-of-type(3) > div >button{
+  background-color: transparent;
+  color: black;
+  font-weight: 400;
+  border: 1px black solid;
+}
+.product-stack >div:nth-of-type(2) > div >button:hover,
+.product-stack >div:nth-of-type(3) > div >button:hover{
+  background-color: black;
+  color: white;
+}
+.product-stack >div:nth-of-type(3){
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+}
+.product-stack >div:nth-of-type(3) img{
+  border-radius: 1rem;
+}
+.product-stack >div:nth-of-type(3) > div {
+  background-color: var(--gray);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6rem;
+  gap: 2rem;
 }
