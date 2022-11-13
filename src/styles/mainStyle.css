@@ -38,7 +38,7 @@ main.homepage .banner .banner-content p{
 main.homepage .banner .banner-content p{
   max-width: 40ch;
 }
-main.homepage button{
+main.homepage .btn{
   text-decoration: none;
   background-color: var(--accent);
   color: var(--white);
@@ -52,7 +52,7 @@ main.homepage button{
   align-self: flex-start;
 }
 
-main.homepage button:hover{
+main.homepage .btn:hover{
   background-color: var(--accentLight);
 }
 
@@ -102,10 +102,10 @@ main.homepage button:hover{
   max-width: 3ch;
   letter-spacing: .5rem;
 }
-.product-stack > div:first-of-type >div button{
+.product-stack > div:first-of-type >div .btn{
   background-color: var(--black);
 }
-.product-stack > div:first-of-type >div button:hover{
+.product-stack > div:first-of-type >div .btn:hover{
   background-color: #4c4c4c;
 }
 
@@ -118,15 +118,15 @@ main.homepage button:hover{
   margin-left: 10rem;
   gap: 2rem;
 }
-.product-stack >div:nth-of-type(2) > div >button,
-.product-stack >div:nth-of-type(3) > div >button{
+.product-stack >div:nth-of-type(2) > div >.btn,
+.product-stack >div:nth-of-type(3) > div >.btn{
   background-color: transparent;
   color: black;
   font-weight: 400;
   border: 1px black solid;
 }
-.product-stack >div:nth-of-type(2) > div >button:hover,
-.product-stack >div:nth-of-type(3) > div >button:hover{
+.product-stack >div:nth-of-type(2) > div >.btn:hover,
+.product-stack >div:nth-of-type(3) > div >.btn:hover{
   background-color: black;
   color: white;
 }

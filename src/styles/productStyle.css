@@ -10,6 +10,7 @@ main.product .content a{
   text-decoration: none;
   color: var(--text);
   font-size: .9rem;
+  cursor: pointer;
 }
 main.product .content a:hover{
   text-decoration: underline;

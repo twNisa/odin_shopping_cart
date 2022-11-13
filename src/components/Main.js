@@ -6,30 +6,55 @@ import About from "./About"
 import zx9Img from "../images/home/desktop/image-speaker-zx9.png"
 import zx7Img from "../images/home/desktop/image-speaker-zx7.jpg"
 import yx1Img from "../images/home/desktop/image-earphones-yx1.jpg"
-import pattern from "../images/home/desktop/pattern-circles.svg"
+import {NavLink} from "react-router-dom"
+import {motion} from "framer-motion"
+
 import "../styles/mainStyle.css"
+
 export default function Main(){
-  console.log(data)
+  
   return (
     <main className="homepage">
       <div className="banner">
-        <div className="img-bg">
+        <motion.div className="img-bg"
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{
+          duration: 2,
+          delay: .5,
+
+        }}>
           <picture>
             <img src={banner} alt="hero image" />
           </picture>
-        </div>
-        <div className="banner-content">
+        </motion.div>
+        <motion.div className="banner-content"
+          initial={{opacity: 0}}
+          animate={{opacity: 1}}
+          transition={{
+            duration: 2,
+            delay: 1,
+          }}
+        >
             <h4>new product</h4>
             <h1>XX99 MARK II HEADPHONES</h1>
             <p>Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-            <button>see product</button>
-        </div>
+            <NavLink to={`/odin_shopping_cart/headphones/xx99-mark-two-headphones`} className="btn" >See product</NavLink>
+        </motion.div>
       </div>
       
       <CategoryLinks />
 
       <section className="product-stack">
-        <div>
+        <motion.div
+          initial={{opacity: 0}}
+          whileInView={{opacity:1}}
+          viewport={{ once: true }}
+          transition={{
+            
+            duration: 1
+          }}
+        >
           <picture>
             <img src={zx9Img} />
           </picture>
@@ -40,11 +65,19 @@ export default function Main(){
             <p>
             Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </p>
-            <button>see product</button>
+            <NavLink to={`/odin_shopping_cart/speakers/zx9-speaker`} className="btn" >See product</NavLink>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{opacity: 0}}
+          whileInView={{opacity:1}}
+          viewport={{ once: true }}
+          transition={{
+            
+            duration: 1
+          }}
+        >
           <picture>
             <img src={zx7Img} />
           </picture>
@@ -52,11 +85,18 @@ export default function Main(){
             <h2>
               ZX7 SPEAKER
             </h2>
-            <button>see product</button>
+            <NavLink to={`/odin_shopping_cart/speakers/zx7-speaker`} className="btn" >See product</NavLink>
           </div>
-        </div>
+        </motion.div>
 
-        <div>
+        <motion.div
+          initial={{opacity: 0}}
+          whileInView={{opacity:1}}
+          transition={{
+            
+            duration: 1
+          }}
+        >
           <picture>
             <img src={yx1Img} />
           </picture>
@@ -64,12 +104,23 @@ export default function Main(){
             <h2>
               YX1 EARPHONES
             </h2>
-            <button>see product</button>
+            <NavLink to={`/odin_shopping_cart/earphones/yx1-earphones`} className="btn" >See product</NavLink>
           </div>
-        </div>
+        </motion.div>
       </section>
-
-      <About />
+        
+      <motion.div
+          initial={{opacity: 0}}
+          whileInView={{opacity:1}}
+          viewport={{once: true}}
+          transition={{
+            
+            duration: 1
+          }}
+        >
+          <About />
+        </motion.div>
+      
     </main>
   )
 }

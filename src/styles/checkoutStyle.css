@@ -1,10 +1,12 @@
-main.checkout .content{
-  padding: 2rem;
+main.checkout{
+  padding: 2rem 0;
   max-width: 1110px;
-  display: flex;
-  flex-direction: column;
-  margin: 2rem auto;
+  margin: 0 auto;
+}
 
+main.checkout .content{
+  margin: 2rem auto;
+  width: 100%;
 }
 main.checkout .content a{
   margin-bottom: 2rem;
@@ -16,8 +18,12 @@ main.checkout .content a{
 main.checkout .content a:hover{
   text-decoration: underline;
 }
-
-
+main.checkout form{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
 main.checkout .form-summary{
   padding: 2rem;
@@ -102,11 +108,7 @@ main.checkout .form-summary .form-prices > div:last-of-type > span:last-of-type{
   transition: background-color .2s ease;
 }
 
-main.checkout form{
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-}
+
 main.checkout .form-checkout{
   background-color: white;
   padding: 2rem;

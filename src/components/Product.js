@@ -111,9 +111,9 @@ export default function Product({addItemToCart}){
   return(
     <main className="product">
       <section className="content">
-        <NavLink to={back}>
-          Go Back
-        </NavLink>
+        <a className="back-btn" onClick={()=>window.history.back()}>
+              Go Back
+        </a>
         {product}
       </section>
 

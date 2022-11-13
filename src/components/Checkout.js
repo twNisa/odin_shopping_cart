@@ -71,10 +71,10 @@ export default function Checkout({shoppingCart}){
  
   return (
   <main className="checkout">
-    <section className="content">
-      <a className="back-btn" onClick={()=>window.history.back()}>
+    <a className="back-btn" onClick={()=>window.history.back()}>
             Go Back
       </a>
+    <section className="content">
       <form onSubmit={onSubmit}>
         <div className="form-checkout">
           <h3>checkout</h3>
